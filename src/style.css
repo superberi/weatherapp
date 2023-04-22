@@ -1,0 +1,53 @@
+h1 {
+  padding: 20px 0;
+}
+h2 {
+  text-align: center;
+  padding: 20px 0 20px 0;
+  font-size: 80px;
+  color: rgb(27, 26, 26);
+}
+ul {
+  list-style: none;
+  text-align: center;
+  padding: 0 0 20px 0;
+  font-size: 15px;
+}
+
+.date {
+  font-size: 15px;
+  margin-top: 20px;
+}
+.text {
+  max-width: 400px;
+}
+.icon {
+  font-size: 50px;
+  text-align: center;
+  color: #4773f6;
+  padding: 30px 10px;
+}
+.card {
+  line-height: 60px;
+  position: relative;
+
+  margin: 0 auto;
+  text-align: center;
+}
+.container {
+  border: 1px solid black;
+  padding-bottom: 20px;
+}
+.col-2 {
+  text-align: center;
+  width: auto;
+}
+#fahrenheit {
+  text-decoration: none;
+}
+#celsius {
+  text-decoration: none;
+}
+#description {
+  text-align: center;
+}
