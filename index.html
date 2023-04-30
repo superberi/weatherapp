@@ -4,9 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <title>weatherapp</title>
+    
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,49 +16,74 @@
       src="https://kit.fontawesome.com/aa88fef1e6.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <title>weatherapp</title>
   </head>
   <body>
     <div class="container">
+      <div class="weather-app-wrapper">
       <div class="weather-app">
-      <form id="search-form">
-      <div class="input-group rounded m-2">
-        <input
-          type="search"
-          class="form-control rounded"
-          placeholder="Search"
-          aria-label="Search"
-          aria-describedby="search-addon"
-          value=""
-          id="search-field"
-        />
-        <span class="input-group-text border-0" id="search-addon">
-          <i class="fas fa-search"></i>
-        </span>
-        <button type="button" class="btn btn-primary rounded m-1" id="location-button">current location</button>
-        </form>
-      </div>
 
+
+
+      <form id="search-form" class="mb-3">
+        <div class="row">
+          <div class="col-8">
+            <input
+              type="search"
+              class="form-control rounded"
+              placeholder="Search"
+              aria-label="Search"
+              aria-describedby="search-addon"
+              value=""
+              id="search-field"
+            />
+          </div>
+          <div class="col-2">
+            <input
+              type="submit"
+              value="search"
+              class="btn btn-primary w-100"
+            />
+          </div>
+          <div class="col-2">
+            <button type="button" class="btn btn-primary" id="location-button">current location</button>
+          </div>
+        </div>
+      </form>
+
+
+
+
+      
+    <div class="overview">
       <h1>
         <span id="city">Berlin</span> 
       </h1>
       <ul>
         <li>
-        <p class="date" id="currentDate"></p>
+          <p class="date" id="currentDate"></p>
         </li>
         <li>
-        <p id="description">partly cloudy></p>
+          <p id="description">partly cloudy></p>
         </li>
       </ul>
+    </div>
 
       <div class="row">
         <div class="col-6">
+          <div class="d-flex weather-temperature">
           <img 
-            src="images/sun.jpeg" 
+            src="" 
             alt="sunny icon"
-            class="weather-icon"/>
+            id="icon"/>
             <span id="temperature">-2 </span>
-            <span><a href="#" id="celsius">°C</a></span>/<span><a href="#" id="fahrenheit">°F</a></span>
+            <span class="units">
+            <span><a href="#" id="celsius">°C</a></span> |<span>
+              <a href="#" id="fahrenheit">°F</a></span></span>
+          </div>
         </div>
+     
         <div class="col-6">
           <ul>
             <li>Humidity: <span id="humidity">60</span>%</li>
@@ -122,11 +146,10 @@
           </div>
         </div>
        </div>
-        <div></div>
+       </div>
       </section>
       <p id="github-link"><a href="https://github.com/superberi/weatherapp" target="_blank"> Open-source code </a> by Verena</p>
     </div>
-     
     <script src="src/index.js"></script>
   </body> 
 </html>
