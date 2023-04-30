@@ -20,6 +20,7 @@
   </head>
   <body>
     <div class="container">
+      <div class="weather-app">
       <form id="search-form">
       <div class="input-group rounded m-2">
         <input
@@ -35,23 +36,43 @@
           <i class="fas fa-search"></i>
         </span>
         <button type="button" class="btn btn-primary rounded m-1" id="location-button">current location</button>
-        <p class="date" id="currentDate"></p>
         </form>
       </div>
 
-      <h2>
-        <span id="city">Berlin</span> <span id="temperature">-2 </span>
-        <span><a href="#" id="celsius">°C</a></span
-        >/<span><a href="#" id="fahrenheit">°F</a></span>
-        <i class="fa-solid fa-snowflake recent_icon"></i>
-      </h2>
-      <h4 id="description">partly cloudy</h4>
-      <div>
-        <ul>
-        <li>Humidity: <span id="humidity">60</span>%</li>
-        <li>Wind: <span id="wind">10</span>km/h</li>
-        </ul>
+      <h1>
+        <span id="city">Berlin</span> 
+      </h1>
+      <ul>
+        <li>
+        <p class="date" id="currentDate"></p>
+        </li>
+        <li>
+        <p id="description">partly cloudy></p>
+        </li>
+      </ul>
+
+      <div class="row">
+        <div class="col-6">
+          <img 
+            src="images/sun.jpeg" 
+            alt="sunny icon"
+            class="weather-icon"/>
+            <span id="temperature">-2 </span>
+            <span><a href="#" id="celsius">°C</a></span>/<span><a href="#" id="fahrenheit">°F</a></span>
+        </div>
+        <div class="col-6">
+          <ul>
+            <li>Humidity: <span id="humidity">60</span>%</li>
+            <li>Wind: <span id="wind">10</span>km/h</li>
+          </ul>
+        </div>
       </div>
+
+       
+
+
+
+      
       <section class="forecast">
         <div class="row">
           <div class="col-md">
@@ -100,10 +121,12 @@
             </div>
           </div>
         </div>
+       </div>
         <div></div>
       </section>
       <p id="github-link"><a href="https://github.com/superberi/weatherapp" target="_blank"> Open-source code </a> by Verena</p>
     </div>
+     
     <script src="src/index.js"></script>
   </body> 
 </html>
