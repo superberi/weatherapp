@@ -70,6 +70,11 @@ li:first-letter {
   text-align: center;
   width: auto;
 }
+.active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+  text-decoration: none;
+}
 #fahrenheit {
   text-decoration: none;
 }

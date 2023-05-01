@@ -37,7 +37,6 @@ newDate.innerHTML = formatDate(now);
 // feature 2
 
 function displayWeather(response) {
-  console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
@@ -48,7 +47,7 @@ function displayWeather(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
-
+  celsiusTemperature = response.data.main.temp;
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
@@ -72,10 +71,6 @@ function handleSubmit(event) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
-searchCity("Barcelona");
-
-// geolocation
-
 function searchPosition(position) {
   let apiKey = "515c9ddbeb3cda9061acfab71031839e";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
@@ -90,20 +85,27 @@ function getCurrentPosition(event) {
 let locationButton = document.querySelector("#location-button");
 locationButton.addEventListener("click", getCurrentPosition);
 
-// feature 3
-//function degreeFahrenheit() {
-// let h2 = document.querySelector("#temperature");
-// h2.innerHTML = "14";
-//}
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
+  let temperatureElement = document.querySelector("#temperature");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
 
-//let displayF = document.querySelector("#fahrenheit");
-//displayF.addEventListener("click", degreeFahrenheit);
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", displayFahrenheitTemperature);
 
-//function degreeCelsius() {
-// let h2 = document.querySelector("#temperature");
-// h2.innerHTML = "1";
-//}
-//let displayC = document.querySelector("#celsius");
-//displayC.addEventListener("click", degreeCelsius);
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  celsius.classList.add("active");
+  fahrenheit.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
 
-/// current data
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", displayCelsiusTemperature);
+
+searchCity("Barcelona");
