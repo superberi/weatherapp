@@ -36,7 +36,8 @@
                   id="search-field"
                 />
               </div>
-              <div class="col-2">
+
+              <div class="col-2 top-buttons">
                 <input
                   type="submit"
                   value="search"
@@ -44,7 +45,7 @@
                   id="search-button"
                 />
               </div>
-              <div class="col-2">
+              <div class="col-2 top-buttons">
                 <button
                   type="button"
                   class="btn btn-primary"
@@ -60,15 +61,10 @@
               <span id="city"></span>
             </h1>
             <ul>
-              <li>
-                <p class="date" id="currentDate"></p>
-              </li>
-              <li>
-                <p id="description"></p>
-              </li>
+              <li><p class="date" id="currentDate"></p></li>
+              <li><p id="description"></p></li>
             </ul>
           </div>
-
           <div class="row">
             <div class="col-6">
               <div class="d-flex weather-temperature">
@@ -81,59 +77,28 @@
               </div>
             </div>
             <div class="col-6">
+              <div class="condition"></div>
               <ul>
                 <li>Humidity: <span id="humidity">60</span>%</li>
                 <li>Wind: <span id="wind">10</span>km/h</li>
               </ul>
             </div>
           </div>
+        </div>
 
-          <div class="weather-forecast">
-            <div class="row">
-              <div class="col-md">
-                <div class="card mx-auto" style="width: auto">
-                  <div class="card-body">
-                    <h6 class="card-title">Tue, 30.03.</h6>
-                    <i class="fa-solid fa-cloud-bolt icon"></i>
-                    <p class="card-text">4°/12°</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md">
-                <div class="card mx-auto" style="width: auto">
-                  <div class="card-body">
-                    <h6 class="card-title">Wed, 31.03.</h6>
-                    <i class="fa-sharp fa-solid fa-cloud-rain icon"></i>
-                    <p class="card-text">6°/12°</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md">
-                <div class="card mx-auto" style="width: auto">
-                  <div class="card-body">
-                    <h6 class="card-title">Thu, 01.04.</h6>
-                    <i class="fa-solid fa-cloud-sun-rain icon"></i>
-                    <p class="card-text">12°/12°</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md">
-                <div class="card mx-auto" style="width: auto">
-                  <div class="card-body">
-                    <h6 class="card-title">Fri, 02.04.</h6>
-                    <i class="fa-solid fa-cloud icon"></i>
-                    <p class="card-text">16°/12°</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md">
-                <div class="card mx-auto" style="width: auto">
-                  <div class="card-body">
-                    <h6 class="card-title">Sat, 03.04.</h6>
-                    <i class="fa-sharp fa-solid fa-sun icon sun"></i>
-                    <p class="card-text">20°/12°</p>
-                  </div>
-                </div>
+        <div class="weather-forecast">
+          <div class="row">
+            <div class="col-2">
+              <div class="weather-forecast-date">Thursday</div>
+              <img
+                src="http://openweathermap.org/img/wn/03d@2x.png"
+                width="60"
+              />
+              <div class="weather-forecast-temperature">
+                <span class="weather-forecast-temp-max"> 18°</span>/<span
+                  class="weather-forecast-temp-min"
+                  >12°</span
+                >
               </div>
             </div>
           </div>

@@ -26,6 +26,24 @@ li {
 li:first-letter {
   text-transform: capitalize;
 }
+
+#temperature {
+  color: #7c7c7c;
+  font-size: 64px;
+  font-weight: 400;
+}
+#fahrenheit {
+  text-decoration: none;
+}
+#celsius {
+  text-decoration: none;
+}
+
+#github-link {
+  font-size: 12px;
+  padding: 20px 0 0 0;
+  text-align: center;
+}
 .weather-app-wrapper {
   border: 1px solid #7c7c7c;
   padding: 15px;
@@ -44,29 +62,12 @@ li:first-letter {
   top: 20px;
 }
 
-#temperature {
-  color: #7c7c7c;
-  font-size: 64px;
-  font-weight: 400;
-}
-
 .date {
   font-size: 15px;
   margin-top: 20px;
 }
-.text {
-  max-width: 400px;
-}
 
-.card {
-  line-height: 60px;
-  position: relative;
-
-  margin: 0 auto;
-  text-align: center;
-}
-
-.col-2 {
+.top-buttons {
   text-align: center;
   width: auto;
 }
@@ -75,15 +76,20 @@ li:first-letter {
   cursor: default;
   text-decoration: none;
 }
-#fahrenheit {
-  text-decoration: none;
+.weather-forecast {
+  color: #7c7c7c;
+  margin-top: 20px;
+  margin-left: 10px;
+  text-align: center;
 }
-#celsius {
-  text-decoration: none;
+.weather-forecast-date {
+  font-size: 16px;
 }
 
-#github-link {
-  font-size: 12px;
-  padding: 20px 0 0 0;
-  text-align: center;
+.weather-forecast-temp-max {
+  color: rgb(80, 71, 71);
+}
+
+.weather-forecast-temperature {
+  font-size: 13px;
 }
