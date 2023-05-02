@@ -35,7 +35,34 @@ let newDate = document.querySelector("#currentDate");
 let now = new Date();
 newDate.innerHTML = formatDate(now);
 
-// feature 2
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+            <div class="col-2">
+              <div class="weather-forecast-date">${day}</div>
+              <img
+                src="http://openweathermap.org/img/wn/03d@2x.png"
+                width="60"
+              />
+              <div class="weather-forecast-temperature">
+                <span class="weather-forecast-temp-max"> 18°</span>/<span
+                  class="weather-forecast-temp-min"
+                  >12°</span
+                >
+              </div>
+            </div>      
+        `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 
 function displayWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
@@ -95,9 +122,6 @@ function displayFahrenheitTemperature(event) {
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", displayFahrenheitTemperature);
-
 function displayCelsiusTemperature(event) {
   event.preventDefault();
   celsius.classList.add("active");
@@ -106,7 +130,11 @@ function displayCelsiusTemperature(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", displayFahrenheitTemperature);
+
 let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", displayCelsiusTemperature);
 
 searchCity("Barcelona");
+displayForecast();
