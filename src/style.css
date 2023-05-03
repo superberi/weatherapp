@@ -46,6 +46,12 @@ li:first-letter {
 }
 .weather-app-wrapper {
   border: 1px solid #7c7c7c;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(215, 223, 252) 0%,
+    rgb(255, 255, 255) 0%,
+    rgb(215, 223, 252) 84%
+  );
   padding: 15px;
   margin: 20px auto;
   border-radius: 10px;
