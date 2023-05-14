@@ -35,12 +35,13 @@ li:first-letter {
 
 #celsius {
   text-decoration: none;
+  color: #7c7c7c;
 }
 
 #github-link {
   font-size: 12px;
-  padding: 20px 0 0 0;
   text-align: center;
+  margin-top: -10px;
 }
 .weather-app-wrapper {
   border: 1px solid #7c7c7c;
