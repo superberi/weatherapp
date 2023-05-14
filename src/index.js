@@ -139,27 +139,11 @@ function getCurrentPosition(event) {
 let locationButton = document.querySelector("#location-button");
 locationButton.addEventListener("click", getCurrentPosition);
 
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  celsius.classList.remove("active");
-  fahrenheit.classList.add("active");
-  let temperatureElement = document.querySelector("#temperature");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  celsius.classList.add("active");
-  fahrenheit.classList.remove("active");
+function displayCelsiusTemperature() {
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", displayFahrenheitTemperature);
-
 let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", displayCelsiusTemperature);
 
 searchCity("Barcelona");
