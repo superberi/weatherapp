@@ -11,7 +11,7 @@ h1 {
 }
 
 ul {
-  margin: 0;
+  margin-top: 20px;
   padding: 0;
 }
 
@@ -34,8 +34,8 @@ li:first-letter {
 }
 
 #celsius {
-  text-decoration: none;
   color: #7c7c7c;
+  text-decoration: none;
 }
 
 #github-link {
